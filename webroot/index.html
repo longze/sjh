@@ -1,13 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+<style type="text/css">
+a:link{text-decoration:none; color:#000;}
+a:visited{text-decoration:none; color:#6F0;}
+a:hover{text-decoration:underline; color:#00F;}
+a:active{text-decoration:overline; color:#F00;}
+a.web:visited{text-decoration:none; color:red;}
+a.web:link{text-decoration:none; color:red;}
+</style>
 <head>
     <meta charset="UTF-8">
     <title>周日诵经会</title>
+    <link href="../btstrp/css/mylink.css">
     <link href="../btstrp/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="../btstrp/js/bootstrap.min.js"></script>
 </head>
 <body >
-<div id="header"><iframe src="header.html" width="100%" frameborder="0"></iframe></div>
-<footer class="footer navbar-fixed-bottom "><iframe src="footer.html" width="100%"  frameborder="0"></iframe></footer>
+<!-- main slider carousel -->
+<div id="header" style="z-index:100;position:absolute;top:200px;left:50%;background-color:transparent;">
+    <nav class="navbar navbar-default  navbar-fixed-top" role="navigation" >
+        <div> <img src="./img/logo.png" style="display:inline;float:left; margin-top:30px;margin-left:90px;"/></div>
+        <div style="display:inline; float:right;margin-top:45px;">
+            <ul  class="nav navbar-nav navbar-right" style="font-size:16px;color:#cccccc;">
+                <li class="active" style="margin-right:40px"><a href="index.html">首页</a></li>
+                <li style="margin-right:40px;"><a href="#">诵经活动</a></li>
+                <li style="margin-right:40px;"><a href="#">电子经文</a></li>
+                <li style="margin-right:40px;"><a href="#">诵经心得</a></li>
+                <li style="margin-right:40px;"><a href="#">活动相册</a></li>
+            </ul>
+        </div>
+    </nav>
+    </iframe>
+</div>
+<div id="lunboDesc"  style="line-height:200%;z-index:100;position:absolute;top:250px;left:30%;font-size:18px;width:960px;background-color:transparent;color:#cccccc;text-align:center;">
+    <h1 style="text-align:center;">传承信仰生活 传承大乘经典</h1>
+    <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)"color=#cccccc SIZE=1>
+    自那以后，大家开始每周诵“法华经”一卷。从年初到十月份，已经诵了“法华经”十部。因为当时我们还有“法华经”的精进共修，就是每两个月
+    会有一天是从早诵到晚诵一整部。</p>
+</div>
+<div id="myCarousel" class="carousel slide" style="z-index:9;margin-top:-100px;">
+    <!-- main slider carousel items -->
+    <div class="carousel-inner">
+        <div class="active item" data-slide-number="0">
+            <img src="./img/slide1.jpg" class="img-responsive">
+        </div>
+        <div class="item" data-slide-number="1">
+            <img src="./img/slide2.jpg" class="img-responsive">
+        </div>
+        <div class="item" data-slide-number="2">
+            <img src="./img/slide1.jpg" class="img-responsive">
+        </div>
+    </div>
+    <!-- main slider carousel nav controls -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+</div>
+<!--/main slider carousel-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- thumb navigation carousel -->
+        <div class="col-md-12 hidden-sm hidden-xs" id="slider-thumbs">
+            <!-- thumb navigation carousel items -->
+            <ul class="list-inline">
+                <li> <a id="carousel-selector-0" class="selected">
+                    <img src="#" class="img-responsive">
+                </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="songjin" style="margin-left:20%;">
+    <div id="songjindesc" style="margin-top:115px;width:470px;">
+        <h1 style="font-size:24px;">何为诵经</h1>
+        <p style="font-size:16px;margin-top:35px;line-height:180%;">这个活动的特定是"固定",固定在周日上午九点,固定诵经一卷。
+            慢慢形成人的一种习惯，一种潜意识。让受众脑子里有一个固定的认识，就是每周日上午九点，龙泉寺一定在诵一卷经。做网络直播同样是
+            这种理念，无论在天涯海角，不管是风吹雨打，只要是周日上午九点，打开一个网页就可以和大家一起诵经。就像在西方人的文化中，周日上午固定是在
+            教堂礼拜时间一样，每周日上午九点，大家都可以回归佛教信仰生活，回归传统的修行方式。</p>
+        <button type="button" style="background-color:#666666;color:#cccccc;margin-left:150px;margin-top:60px;width:150px;height:35px;">进一步了解 ></button>
+    </div>
+    <div id="songjinzhibo"></div>
+</div>
+<footer class="footer"><iframe src="footer.html" width="100%"  frameborder="0"></iframe></footer>
+<script type="text/javascript">
+    	$('#myCarousel').carousel({
+			interval: 4000
+		});
+		$('[id^=carousel-selector-]').click( function(){
+		  var id_selector = $(this).attr("id");
+		  var id = id_selector.substr(id_selector.length -1);
+		  id = parseInt(id);
+		  $('#myCarousel').carousel(id);
+		  $('[id^=carousel-selector-]').removeClass('selected');
+		  $(this).addClass('selected');
+		});
+		$('#myCarousel').on('slid', function (e) {
+		  var id = $('.item.active').data('slide-number');
+		  id = parseInt(id);
+		  $('[id^=carousel-selector-]').removeClass('selected');
+		  $('[id=carousel-selector-'+id+']').addClass('selected');
+		});
+</script>
 </body>
 </html>
