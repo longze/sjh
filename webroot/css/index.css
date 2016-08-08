@@ -1,0 +1,14 @@
+.navbar {
+	/*background-color: #333;*/
+	background-color:transparent;
+	border-color:transparent;
+	min-height: 80px;
+}
+
+.navbar-brand {
+	height: 80px;
+}
+
+.navbar-nav {
+	margin-top: 15px;
+}

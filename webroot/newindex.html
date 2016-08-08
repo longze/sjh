@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<title>周日诵经会</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="描述文字">
+		<meta name="keywords" content="">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/index.css" rel="stylesheet">
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="index.html">首页</a></li>
+						<li><a href="#">诵经活动</a></li>
+						<li><a href="#">电子经文</a></li>
+						<li><a href="#">诵经心得</a></li>
+						<li><a href="#">活动相册</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div id="myCarousel" class="carousel slide" style="">
+			<!-- main slider carousel items -->
+			<div class="carousel-inner">
+				<div class="active item" data-slide-number="0">
+					<img src="./img/slide1.jpg" class="img-responsive">
+				</div>
+				<div class="item" data-slide-number="1">
+					<img src="./img/slide2.jpg" class="img-responsive">
+				</div>
+				<div class="item" data-slide-number="2">
+					<img src="./img/slide1.jpg" class="img-responsive">
+				</div>
+			</div>
+			<!-- main slider carousel nav controls -->
+			<a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+			<a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+		</div>
+		<div class="container">
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$('#myCarousel').carousel({
+				interval: 4000
+			});
+			$('[id^=carousel-selector-]').click( function(){
+			  var id_selector = $(this).attr("id");
+			  var id = id_selector.substr(id_selector.length -1);
+			  id = parseInt(id);
+			  $('#myCarousel').carousel(id);
+			  $('[id^=carousel-selector-]').removeClass('selected');
+			  $(this).addClass('selected');
+			});
+			$('#myCarousel').on('slid', function (e) {
+			  var id = $('.item.active').data('slide-number');
+			  id = parseInt(id);
+			  $('[id^=carousel-selector-]').removeClass('selected');
+			  $('[id=carousel-selector-'+id+']').addClass('selected');
+			});
+		</script>
+	</body>
+</html>
