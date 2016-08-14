@@ -16,9 +16,13 @@
     background-image: url("../img/songjing_bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: 1920px 450px;
     margin-bottom: 20px;
+}
+
+
+.ebook .nav {
+    background-image: url("../img/ebook.jpg");
 }
 
 .songjing .nav h1.title {
@@ -39,10 +43,10 @@
     margin: 0;
     padding: 0;
     padding-bottom: 10px;
+    margin-bottom: 10px;
     overflow: auto;
     border-bottom: 1px solid #eee;
 }
-
 
 .songjing ul.tab  li {
     margin: 0;
