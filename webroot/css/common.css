@@ -25,6 +25,14 @@
     background-image: url("../img/ebook.jpg");
 }
 
+.songjingxinde .nav {
+    background-image: url("../img/songjingxinde.jpg");
+}
+
+.huodongxiangce .nav {
+    background-image: url("../img/huodongxiangce.jpg");
+}
+
 .songjing .nav h1.title {
     font-size: 36px;
     margin: 140px auto 45px;
