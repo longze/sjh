@@ -1,0 +1,68 @@
+/* header css */
+
+.navbar {
+	/*background-color: #333;*/
+	background-color:transparent;
+	border-color:transparent;
+	min-height: 80px;
+}
+
+.nav-gray-bg {
+	background-color: #333;
+}
+
+.navbar-brand {
+	height: 100px;
+}
+
+.navbar-brand img {
+	margin-top: 10px;
+}
+
+.navbar-nav {
+	margin-top: 20px;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color:#fff;
+}
+
+.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover {
+	color:#777;
+}
+
+/* header css end */
+
+
+.content-header {
+	height: 450px;
+	background: url("../img/channel_bg1.jpg"); 
+	background-position: center; 
+	background-repeat: no-repeat;
+	color: #fff;
+}
+
+.content-header-text {
+
+	margin-top:150px;
+	
+}
+
+.content-header-text h1 {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.content-tab {
+	margin-top:20px;
+	
+}
+
+.content-tab a {
+	color: #8c8c8c;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+	background-color: #eee;
+	color: #8c8c8c;
+}
